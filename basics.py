@@ -1,4 +1,7 @@
 from selenium import webdriver
+from shutil import which
 
-driver = webdriver.Chrome(executable_path="./chromedriver.exe")
+chrome_path= which("chromedriver")
+
+driver = webdriver.Chrome(executable_path=chrome_path)
 driver.get("https://duckduckgo.com")
